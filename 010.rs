@@ -1,4 +1,4 @@
-fn main() {
+fn main() { 
 	let mut stack = vec![];
 
 	stack.push(0);
@@ -6,6 +6,8 @@ fn main() {
 	stack.push(2);
 
 	println!("{:?}", stack);
+
 	println!("{:?}", stack.pop().unwrap());
 	println!("{:?}", stack);
+
 }
