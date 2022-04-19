@@ -29,3 +29,8 @@
 020 : gcd lcm  
 021 : prime  
 022 : divisors  
+
+### 2022-04-19
+023 : array  
+024 : vector  
+025 : vector capacity
