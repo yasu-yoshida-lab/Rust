@@ -32,3 +32,10 @@
 
 ### 2022-04-19
 023 : array access  
+024 : vector  
+025 : vector capacity  
+
+### 2022-04-21
+026 : vector auto 
+027 : vector for  
+028 : vector debug
