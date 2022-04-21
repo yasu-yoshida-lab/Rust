@@ -1,4 +1,4 @@
-pub fn is_prime(n : usize) -> bool { 
+pub fn is_prime(n: usize) -> bool { 
 	if n == 0 || n == 1 { 
 		return false;
 	}

@@ -1,6 +1,6 @@
 use std::ops;
 
-const MOD : usize = 1000000007;
+const MOD: usize = 1000000007;
 
 #[derive(Copy, Clone)]
 pub struct ModInt { 
@@ -8,7 +8,7 @@ pub struct ModInt {
 }
 
 impl ModInt { 
-	pub fn new(value : usize) -> ModInt { 
+	pub fn new(value: usize) -> ModInt { 
 		ModInt { value : value % MOD } 
 	}
 
@@ -17,7 +17,7 @@ impl ModInt {
 	} 
 
 	pub fn inverse(&self) -> ModInt { 
-		fn extend_gcd(a : isize, b : isize) -> (isize, isize) { 
+		fn extend_gcd(a: isize, b: isize) -> (isize, isize) { 
 			if (a, b) == (1, 0) { 
 				return (1, 0); 
 			}
@@ -32,39 +32,39 @@ impl ModInt {
 
 impl ops::Add for ModInt { 
 	type Output = ModInt; 
-	fn add(self, other : Self) -> Self { 
+	fn add(self, other: Self) -> Self { 
 		ModInt::new(self.value + other.value)
 	}
 }
 
 impl ops::Sub for ModInt { 
 	type Output = ModInt; 
-	fn sub(self, other : Self) -> Self { 
+	fn sub(self, other: Self) -> Self { 
 		ModInt::new(MOD + self.value - other.value)
 	}
 }
 
 impl ops::Mul for ModInt { 
 	type Output = ModInt; 
-	fn mul(self, other : Self) -> Self { 
+	fn mul(self, other: Self) -> Self { 
 		ModInt::new(self.value * other.value)
 	}
 }
 
 impl ops::AddAssign for ModInt { 
-	fn add_assign(&mut self, other : Self) { 
+	fn add_assign(&mut self, other: Self) { 
 		*self = *self + other;
 	}
 }
 
 impl ops::SubAssign for ModInt { 
-	fn sub_assign(&mut self, other : Self) { 
+	fn sub_assign(&mut self, other: Self) { 
 		*self = *self - other;
 	}
 }
 
 impl ops::MulAssign for ModInt { 
-	fn mul_assign(&mut self, other : Self) { 
+	fn mul_assign(&mut self, other: Self) { 
 		*self = *self * other; 
 	}
 }
@@ -72,18 +72,18 @@ impl ops::MulAssign for ModInt {
 
 impl ops::Div for ModInt { 
 	type Output = ModInt;
-	fn div(self, other : Self) -> Self { 
+	fn div(self, other: Self) -> Self { 
 		self * other.inverse()
 	}
 }
 
 impl ops::DivAssign for ModInt { 
-	fn div_assign(&mut self, other : Self) { 
+	fn div_assign(&mut self, other: Self) { 
 		*self = *self / other;
 	}
 }
 
-pub fn pow(a : usize, mut n : usize) -> ModInt { 
+pub fn pow(a: usize, mut n: usize) -> ModInt { 
 	let mut res = ModInt::new(1);
 	let mut x = ModInt::new(a);
 	while n > 0 { 
@@ -96,15 +96,15 @@ pub fn pow(a : usize, mut n : usize) -> ModInt {
 	res 
 }
 
-pub fn factorial(n : usize) -> ModInt { 
+pub fn factorial(n: usize) -> ModInt { 
 	(1..=n).fold(ModInt::new(1), |x, y| x * ModInt::new(y))
 }
 
-pub fn permutation(n : usize, r : usize) -> ModInt { 
+pub fn permutation(n: usize, r: usize) -> ModInt { 
 	(0..r).fold(ModInt::new(1), |x, y| x * ModInt::new(n - y))
 }
 
-pub fn combination(n : usize, r : usize) -> ModInt { 
+pub fn combination(n: usize, r: usize) -> ModInt { 
 	permutation(n, r) / factorial(r)
 }
 

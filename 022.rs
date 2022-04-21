@@ -1,4 +1,4 @@
-pub fn get_divisors(n : usize) -> Vec<usize> { 
+pub fn get_divisors(n: usize) -> Vec<usize> { 
 	let mut res = vec![];
 
 	for i in (1..).take_while(|&x| x * x <= n) { 

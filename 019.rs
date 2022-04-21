@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-fn fib(n : usize, memo : &mut HashMap<usize, u128>) -> u128 { 
+fn fib(n: usize, memo: &mut HashMap<usize, u128>) -> u128 { 
 	if let Some(value) = memo.get(&n) { 
 		return *value; 
 	}
