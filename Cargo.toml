@@ -6,8 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+proconio = "0.3.6"
 
 [[bin]]
 name = "main"
-path = "src/030.rs"
-
+path = "src/032.rs"

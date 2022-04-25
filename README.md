@@ -41,3 +41,7 @@
 028 : vector debug  
 029 : tuple  
 030 : tuple unwrap  
+
+### 2022-04-21
+031 : proconio input i32   
+032 : proconio input f64  
