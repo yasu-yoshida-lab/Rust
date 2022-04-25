@@ -36,7 +36,7 @@
 025 : vector capacity  
 
 ### 2022-04-21
-026 : vector auto 
+026 : vector auto   
 027 : vector for  
 028 : vector debug  
 029 : tuple  
