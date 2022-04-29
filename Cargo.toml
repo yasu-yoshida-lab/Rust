@@ -10,4 +10,4 @@ proconio = "0.3.6"
 
 [[bin]]
 name = "main"
-path = "src/032.rs"
+path = "src/035.rs"

@@ -45,3 +45,8 @@
 ### 2022-04-21
 031 : proconio input i32   
 032 : proconio input f64  
+
+### 2022-04-30
+033 : copy(i32, f64)
+034 : vec moved  
+035 : mut vec moved  
