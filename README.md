@@ -50,3 +50,22 @@
 033 : copy(i32, f64)
 034 : vec moved  
 035 : mut vec moved  
+036 : reference vec
+
+### 2022-05-02
+037 : Not Moved  
+038 : Reference -> Moved Error  
+039 : tuple moved
+040 : tuple moved ( Only element 0 )   
+041 : tuple part element of moved   
+
+### 2022-05-03
+042 : Not pass by reference
+043 : Pass by reference
+044 : mutable reference
+
+### 2022-05-05
+045 : recursive ( Upstairs )
+046 : recursive ( Sum )
+047 : function generics
+047 : trait ( impl )
